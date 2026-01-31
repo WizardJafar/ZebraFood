@@ -27,7 +27,7 @@ export default function Navbar() {
 
             <div className="drawer-content">
                 <header className="h-screen overflow-hidden">
-                    <nav className="navbar flex justify-between sticky top-0 z-50 bg-base-100/50 backdrop-blur border-b border-base-300 px-4">
+                    <nav className="navbar fixed flex justify-between  top-0 z-50 bg-base-100/50 backdrop-blur border-b border-base-300 px-4">
                         <div className="flex-1 w-[20%]">
                             <div className="flex items-center gap-3 font-black">
                                 <img src={logo} alt="Zebra Food logo" className="w-9 h-9" />
@@ -40,7 +40,6 @@ export default function Navbar() {
                                 <li><a href="#home">Главная</a></li>
                                 <li><a href="#menu">Меню</a></li>
                                 <li><a href="#contacts">Контакты</a></li>
-                                <li><a href="#branches">Наши филиалы</a></li>
                             </ul>
                         </div>
 

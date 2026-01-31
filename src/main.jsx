@@ -6,12 +6,14 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import App from "./App";
+import Menyu from "./pages/Menyu";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -2,36 +2,55 @@
 @plugin "daisyui";
 
 @plugin "daisyui/theme" {
-  name: "luxury";
-  default: false;
-  prefersdark: false;
+  name: "luxury-pro";
+  default: true;
+  prefersdark: true;
   color-scheme: "dark";
-  --color-base-100: oklch(30% 0.056 229.695);
-  --color-base-200: oklch(39% 0.07 227.392);
-  --color-base-300: oklch(45% 0.085 224.283);
-  --color-base-content: oklch(95% 0.045 203.388);
-  --color-primary: oklch(71% 0.143 215.221);
-  --color-primary-content: oklch(98% 0.019 200.873);
-  --color-secondary: oklch(62% 0.265 303.9);
-  --color-secondary-content: oklch(97% 0.014 308.299);
-  --color-accent: oklch(65% 0.241 354.308);
-  --color-accent-content: oklch(97% 0.014 343.198);
-  --color-neutral: oklch(52% 0.105 223.128);
-  --color-neutral-content: oklch(98% 0.019 200.873);
-  --color-info: oklch(70% 0.165 254.624);
-  --color-info-content: oklch(28% 0.091 267.935);
-  --color-success: oklch(76% 0.177 163.223);
-  --color-success-content: oklch(26% 0.051 172.552);
-  --color-warning: oklch(82% 0.189 84.429);
-  --color-warning-content: oklch(27% 0.077 45.635);
-  --color-error: oklch(71% 0.202 349.761);
-  --color-error-content: oklch(28% 0.109 3.907);
-  --radius-selector: 1rem;
-  --radius-field: 0.5rem;
-  --radius-box: 0rem;
+
+  /* ---------- BASE (premium dark) ---------- */
+  --color-base-100: oklch(18% 0.02 240);   /* app background */
+  --color-base-200: oklch(22% 0.025 240);  /* cards */
+  --color-base-300: oklch(27% 0.03 240);   /* borders / elevated */
+  --color-base-content: oklch(92% 0.02 240); /* text */
+
+  /* ---------- BRAND (calm + professional) ---------- */
+  --color-primary: oklch(72% 0.13 220);         /* blue */
+  --color-primary-content: oklch(12% 0.02 240); /* on primary */
+
+  /* Accent: faqat highlight / CTA uchun */
+  --color-secondary: oklch(68% 0.18 320);         /* violet-magenta */
+  --color-secondary-content: oklch(12% 0.02 240);
+
+  --color-accent: oklch(70% 0.20 10);            /* soft pink-red */
+  --color-accent-content: oklch(12% 0.02 240);
+
+  /* ---------- NEUTRAL (chips, subtle UI) ---------- */
+  --color-neutral: oklch(30% 0.03 240);
+  --color-neutral-content: oklch(92% 0.02 240);
+
+  /* ---------- STATES ---------- */
+  --color-info: oklch(74% 0.11 230);
+  --color-info-content: oklch(12% 0.02 240);
+
+  --color-success: oklch(74% 0.16 155);
+  --color-success-content: oklch(12% 0.02 240);
+
+  --color-warning: oklch(82% 0.14 85);
+  --color-warning-content: oklch(16% 0.03 240);
+
+  --color-error: oklch(70% 0.18 25);
+  --color-error-content: oklch(12% 0.02 240);
+
+  /* ---------- SHAPE / DENSITY (real product) ---------- */
+  --radius-selector: 0.9rem;
+  --radius-field: 0.7rem;
+  --radius-box: 1.25rem;
+
   --size-selector: 0.25rem;
   --size-field: 0.25rem;
+
+  /* Border & depth: “premium” ko‘rinish */
   --border: 1px;
-  --depth: 0;
-  --noise: 1;
+  --depth: 1;
+  --noise: 0;
 }

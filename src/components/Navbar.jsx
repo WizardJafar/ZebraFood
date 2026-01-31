@@ -40,6 +40,7 @@ export default function Navbar() {
                                 <li><a href="#home">Главная</a></li>
                                 <li><a href="#menu">Меню</a></li>
                                 <li><a href="#contacts">Контакты</a></li>
+                                <li><a href="#about">О нас</a></li>
                             </ul>
                         </div>
 
@@ -137,7 +138,7 @@ export default function Navbar() {
 
                             <div className="relative w-full translate-y-20  -translate-x-6 flex justify-center lg:justify-end">
                                 {REELS.map((url, i) => (
-                                    <div className="w-[340px] md:w-[360px]">
+                                    <div className="w-[340px] md:w-[360px] mt-20">
                                         <InstagramReelFrame permalink={url} />
                                     </div>
                                 ))}

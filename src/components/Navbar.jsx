@@ -116,7 +116,7 @@ export default function Navbar() {
 
 
                     <section id="home" className="relative h-[calc(100vh-64px)] md:h-[calc(100vh-72px)]">
-                        
+                        {/* Abror gey */}
                        
 
                         <div className="relative h-full max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">

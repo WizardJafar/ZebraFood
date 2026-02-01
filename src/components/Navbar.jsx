@@ -6,35 +6,23 @@ import InstagramReelFrame from "./ReactBits/InstagramReelFrame";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const TELEGRAM_LINK = "https://t.me/ZebraFoodBot";
-  const REELS = ["https://www.instagram.com/reel/DUFd7vaCIEZ/"];
 
   return (
     <>
       {/* ================= NAVBAR ================= */}
-      <nav
-        role="navigation"
-        aria-label="Main Navigation"
-        className="sticky top-0 z-50 bg-base-100/80 backdrop-blur border-b border-base-300"
-      >
-        <div className="max-w-7xl mx-auto px-3 sm:px-4">
-          <div className="flex h-16 sm:h-[72px] items-center justify-between">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex h-16 sm:h-20 items-center justify-between text-white">
 
             {/* LOGO */}
             <a href="#home" className="flex items-center gap-2 font-black">
-              <img
-                src={logo}
-                alt="Zebra Food logo"
-                className="w-8 h-8 sm:w-9 sm:h-9"
-              />
-              <span className="text-base sm:text-lg">
-                Zebra <span className="text-primary">Food</span>
-              </span>
+              <img src={logo} alt="Zebra Food logo" className="w-8 h-8" />
+              <span>Zebra Food</span>
             </a>
 
             {/* DESKTOP MENU */}
-            <ul className="hidden lg:flex menu menu-horizontal font-semibold gap-1">
+            <ul className="hidden lg:flex gap-6 font-semibold">
               <li><a href="#home">Главная</a></li>
               <li><a href="#menu">Меню</a></li>
               <li><a href="#contacts">Контакты</a></li>
@@ -42,19 +30,18 @@ export default function Navbar() {
             </ul>
 
             {/* ACTIONS */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <a
                 href={TELEGRAM_LINK}
                 target="_blank"
                 rel="noreferrer"
-                className="btn btn-ghost btn-circle"
-                aria-label="Telegram"
+                className="btn btn-ghost btn-circle text-white"
               >
                 <FaTelegramPlane size={22} />
               </a>
 
               <button
-                className="btn btn-ghost btn-circle lg:hidden"
+                className="btn btn-ghost btn-circle lg:hidden text-white"
                 onClick={() => setMenuOpen(true)}
               >
                 <HiOutlineMenuAlt3 size={26} />
@@ -68,79 +55,49 @@ export default function Navbar() {
       {menuOpen && (
         <div className="fixed inset-0 z-[60]">
           <div
-            className="absolute inset-0 bg-black/40"
+            className="absolute inset-0 bg-black/60"
             onClick={() => setMenuOpen(false)}
           />
-
-          <aside className="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-base-100 shadow-2xl p-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 font-black">
-                <img src={logo} alt="Zebra Food logo" className="w-8 h-8" />
-                <span>Zebra Food</span>
-              </div>
-
-              <button
-                className="btn btn-ghost btn-circle"
-                onClick={() => setMenuOpen(false)}
-              >
+          <aside className="absolute right-0 top-0 h-full w-80 bg-neutral-900 p-4">
+            <div className="flex justify-between items-center font-black text-white">
+              <span>Zebra Food</span>
+              <button onClick={() => setMenuOpen(false)}>
                 <HiX size={26} />
               </button>
             </div>
 
-            <ul className="menu mt-4 font-semibold">
-              <li><a href="#home" onClick={() => setMenuOpen(false)}>Главная</a></li>
-              <li><a href="#menu" onClick={() => setMenuOpen(false)}>Меню</a></li>
-              <li><a href="#contacts" onClick={() => setMenuOpen(false)}>Контакты</a></li>
-              <li><a href="#branches" onClick={() => setMenuOpen(false)}>Филиалы</a></li>
+            <ul className="menu mt-6 font-semibold text-white">
+              <li><a href="#home">Главная</a></li>
+              <li><a href="#menu">Меню</a></li>
+              <li><a href="#contacts">Контакты</a></li>
+              <li><a href="#branches">Филиалы</a></li>
             </ul>
-
-            <a
-              href={TELEGRAM_LINK}
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-primary w-full mt-6"
-            >
-              <FaTelegramPlane size={20} />
-              <span className="ml-2">Написать в TG</span>
-            </a>
           </aside>
         </div>
       )}
 
-      {/* ================= HERO ================= */}
-      <header id="home" className="overflow-hidden">
-        <section className="min-h-[calc(100vh-64px)] sm:min-h-[calc(100vh-72px)]">
-          <div className="max-w-7xl mx-auto px-4 py-10 grid lg:grid-cols-2 gap-10 items-center">
+      {/* ================= HERO (VIDEO / IMAGE FULLSCREEN) ================= */}
+      <header id="home" className="relative w-full h-screen overflow-hidden">
 
-            {/* TEXT */}
-            <div>
-              <h1 className="text-4xl md:text-5xl font-black">
-                Хот-дог <span className="text-primary">Zebra Food</span>
-              </h1>
+        {/* Video / Image Background */}
+        <InstagramReelFrame />
 
-              <p className="mt-4 opacity-80 max-w-xl">
-                Zebra Food в Ташкенте — горячий, сочный street fast-food.
-                Качественные ингредиенты и настоящий
-                <span className="text-error font-bold"> HOT-DOG</span>.
-              </p>
-
-              <div className="mt-6 flex gap-3 flex-wrap">
-                <button className="btn btn-primary">Смотреть меню</button>
-                <button className="btn btn-outline">Hotdog day 🔥</button>
-              </div>
+        {/* HERO CONTENT */}
+        <div className="absolute inset-0 flex items-center">
+          <div className="max-w-4xl mx-auto px-4 text-white text-center sm:text-left">
+            <h1 className="text-4xl md:text-6xl font-black leading-tight">
+              Hot-Dog <br />
+              <span className="text-primary">Zebra Food</span>
+            </h1>
+            <p className="mt-4 max-w-xl text-lg opacity-90">
+              Горячий street fast-food в Ташкенте. Быстро. Сочно. Настоящий <b>HOT-DOG</b>.
+            </p>
+            <div className="mt-6 flex gap-4 flex-wrap justify-center sm:justify-start">
+              <button className="btn btn-primary btn-lg">Смотреть меню</button>
+              <button className="btn btn-outline btn-lg text-white">Hotdog day 🔥</button>
             </div>
-
-            {/* REEL */}
-            <div className="flex justify-center lg:justify-end">
-              {REELS.map((url, i) => (
-                <div key={i} className="w-[280px] sm:w-[320px] md:w-[360px]">
-                  <InstagramReelFrame permalink={url} />
-                </div>
-              ))}
-            </div>
-
           </div>
-        </section>
+        </div>
       </header>
     </>
   );

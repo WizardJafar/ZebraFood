@@ -6,6 +6,9 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import App from "./App";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const router = createBrowserRouter([
   {

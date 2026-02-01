@@ -9,6 +9,8 @@ import {
 import fries from "../assets/fries.png"
 import burger from "../assets/burger.png"
 import sandvich from "../assets/Sandvich.png"
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 export default function AboutUs() {
 
     const Images = [
@@ -86,7 +88,7 @@ export default function AboutUs() {
                             </a>
                         </div>
 
-                       
+
                     </div>
 
                     {/* RIGHT */}
@@ -108,9 +110,11 @@ export default function AboutUs() {
                                 </div>
 
                                 {/* Placeholder grid (без картинок) */}
-                                <div className="flex items-center justify-around">
+                                <div className="flex items-center ">
                                     {Images.map((img) => (
-                                        <img src={img} alt="Food" className="w-50 h-50"/>
+                                        <label className="cursor-pointer " htmlFor="my_modal_7">
+                                            <img src={img} alt="Food" className="w-50 h-50" />
+                                        </label>
                                     ))}
                                 </div>
 
@@ -167,6 +171,41 @@ export default function AboutUs() {
                     </div>
                 </div>
             </div>
+
+
+
+
+            <input type="checkbox" id="my_modal_7" className="modal-toggle" />
+
+            <div className="modal" role="dialog">
+                <div className="modal-box max-w-2xl p-0 overflow-hidden bg-primary/10 backdrop-blur-2xl">
+                    <Swiper
+                        modules={[Navigation, Pagination]}
+                        slidesPerView={1}
+                        pagination={{ clickable: true }}
+                        navigation
+                        className="w-full"
+                    >
+                        {Images.map((img, i) => (
+                            <SwiperSlide key={i}>
+                                <div className="flex items-center justify-center  h-[70vh] ">
+                                    <img
+                                        src={img}
+                                        alt=""
+                                        className="max-w-full max-h-full object-contain"
+                                    />
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+
+                <label className="modal-backdrop" htmlFor="my_modal_7">
+                    Close
+                </label>
+            </div>
+
+
         </section>
     );
 }

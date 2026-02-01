@@ -7,7 +7,7 @@ import InstagramReelFrame from "./ReactBits/InstagramReelFrame";
 export default function Navbar() {
     const [drawerOpen, setDrawerOpen] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
-    const TELEGRAM_LINK = "https://t.me/ZebraFoodBot";
+    const TELEGRAM_LINK = "https://t.me/+998978908080";
 
 
 
@@ -117,7 +117,7 @@ export default function Navbar() {
 
                     <section id="home" className="relative h-[calc(100vh-64px)] md:h-[calc(100vh-72px)] ">
                         {/* Abror gey 132dsa*/}
-                       
+
 
                         <div className="relative h-full max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
                             <div className="flex flex-col justify-center">
@@ -148,8 +148,7 @@ export default function Navbar() {
                     </section>
                 </header>
             </div>
-
-
+       
         </div>
     );
 }

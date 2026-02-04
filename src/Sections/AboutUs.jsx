@@ -6,7 +6,7 @@ import {
     FaLeaf,
     FaMapMarkerAlt,
 } from "react-icons/fa";
-import fries from "../assets/fries.png"
+import fries from "../assets/Fries.png"
 import burger from "../assets/burger.png"
 import sandvich from "../assets/Sandvich.png"
 import { Swiper, SwiperSlide } from "swiper/react";

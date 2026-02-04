@@ -12,12 +12,12 @@ import sandvich from "../assets/Sandvich.png"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 export default function AboutUs() {
-
+// fkdjosjfosdhoifshd
     const Images = [
         sandvich,
         burger,
         fries,
-    ];
+    ]; 
     return (
         <section id="about" className="py-16 sm:py-24 bg-base-100">
             <div className="max-w-7xl mx-auto px-6">

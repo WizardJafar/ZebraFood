@@ -46,17 +46,26 @@ const Branches = () => {
                         </p>
 
                         {/* PHONE */}
-                        <div className="mb-6 bg-base-200 rounded-xl p-4">
-                            <div className="group hover: flex items-center gap-3">
-                                <FaPhone className="text-primary group-hover:rotate-90 transition-all" />
-                                <a
-                                    href="tel:+998909336600"
-                                    className="text-xl font-bold"
+                        <div className="mb-6 bg-base-200 rounded-xl p-4 space-y-3">
+                            {[
+                                { href: "tel:+998978908080", label: "+998 97 890 80 80" },
+                                { href: "tel:+998772660330", label: "+998 77 266 03 30" },
+                            ].map((item, i) => (
+                                <div
+                                    key={i}
+                                    className="group flex items-center gap-3"
                                 >
-                                    +998 97 890 80 80
-                                </a>
-                            </div>
+                                    <FaPhone className="text-primary group-hover:rotate-90 transition-all duration-300" />
+                                    <a
+                                        href={item.href}
+                                        className="text-xl font-bold hover:text-primary transition"
+                                    >
+                                        {item.label}
+                                    </a>
+                                </div>
+                            ))}
                         </div>
+
 
                         {/* ADDRESS + SELECT INLINE */}
                         <div className="mb-8 bg-base-200 rounded-xl p-4">
@@ -94,7 +103,7 @@ const Branches = () => {
                             className="group hover: btn btn-primary  btn-outline shadow shadow-primary    rounded-full w-full sm:w-auto gap-2"
                         >
                             Посмотреть на карте
-                            <FaMapMarkerAlt className="group-hover:-rotate-40 transition-all"/>
+                            <FaMapMarkerAlt className="group-hover:-rotate-40 transition-all" />
                         </a>
 
                         {/* TELEGRAM */}
@@ -105,7 +114,7 @@ const Branches = () => {
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-3 text-primary font-semibold group hover:"
                             >
-                                <FaTelegramPlane className="group-hover:rotate-15 transition-all"/>
+                                <FaTelegramPlane className="group-hover:rotate-15 transition-all" />
                                 Telegram orqali bog‘laning
                             </a>
                         </div>

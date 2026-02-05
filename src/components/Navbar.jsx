@@ -93,10 +93,7 @@ export default function Navbar() {
                                     качественные ингредиенты, <span className="text-error font-bold">HOT-DOG</span> vibe.
                                 </p>
 
-                                <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-3">
-                                    <button className="btn btn-primary btn-sm sm:btn-md md:btn-lg">Смотреть меню</button>
-                                    <button className="btn btn-outline btn-sm sm:btn-md md:btn-lg">Hotdog day 🔥</button>
-                                </div>
+
                             </div>
                             <div className="flex justify-center items-center">
                                 <div className="w-full max-w-md lg:max-w-lg xl:max-w-xl rounded-full border-primary border-2 shadow-2xl shadow-primary flex justify-center p-4 sm:p-6 lg:p-8">
@@ -147,17 +144,20 @@ export default function Navbar() {
                                 Навигация
                             </div>
                             <ul className="menu menu-lg bg-base-100 rounded-box shadow-lg p-2">
-                                {menuItems.map((item) => (
-                                    <li key={item.href}>
-                                        <a
-                                            href={item.href}
-                                            className="flex items-center gap-3 active:bg-primary active:text-primary-content"
-                                        >
-                                            <span className="text-primary">{item.icon}</span>
-                                            <span className="font-semibold">{item.label}</span>
-                                        </a>
-                                    </li>
-                                ))}
+
+                                <li className="rounded-b-md py-2 px-3 hover:text-primary hover:border-b-2 hover:border-primary hover:shadow-primary hover:shadow-xl hover:transition-all">
+                                    <a href="#home">Главная</a>
+                                </li>
+                                <li className="rounded-b-md py-2 px-3 hover:text-primary hover:border-b-2 hover:border-primary hover:shadow-primary hover:shadow-xl hover:transition-all">
+                                    <a href="#contacts">Контакты</a>
+                                </li>
+                                <li className="rounded-b-md py-2 px-3 hover:text-primary hover:border-b-2 hover:border-primary hover:shadow-primary hover:shadow-xl hover:transition-all">
+                                    <a href="#about">О нас</a>
+                                </li>
+                                <li className="rounded-b-md py-2 px-3 hover:text-primary hover:border-b-2 hover:border-primary hover:shadow-primary hover:shadow-xl hover:transition-all">
+                                    <a href="#review">Оцените нас!</a>
+                                </li>
+
                             </ul>
                         </div>
 

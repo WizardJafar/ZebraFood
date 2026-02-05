@@ -12,12 +12,12 @@ import sandvich from "../assets/Sandvich.png"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 export default function AboutUs() {
-// fkdjosjfosdhoifshd
+    // fkdjosjfosdhoifshd
     const Images = [
         sandvich,
         burger,
         fries,
-    ]; 
+    ];
     return (
         <section id="about" className="py-16 sm:py-24 bg-base-100">
             <div className="max-w-7xl mx-auto px-6">
@@ -113,7 +113,7 @@ export default function AboutUs() {
                                 <div className="flex items-center ">
                                     {Images.map((img) => (
                                         <label className="cursor-pointer " htmlFor="my_modal_7">
-                                            <img src={img} alt="Food" className="w-50 h-50" />
+                                            <img src={img} alt="Food" className="w-50 h-50 object-cover bg-cover" />
                                         </label>
                                     ))}
                                 </div>
